@@ -1,0 +1,96 @@
+|   entry0 ();
+|           0x08048060      58             pop eax                     ; [01] -rwx section size 430 named .text
+|           0x08048061      83f810         cmp eax, 0x10               ; 16
+|       ,=< 0x08048064      7e5d           jle 0x80480c3
+|       |   0x08048066      83c404         add esp, 4
+|       |   0x08048069      b910000000     mov ecx, 0x10               ; 16
+|       |   0x0804806e      bb25000000     mov ebx, 0x25               ; '%' ; 37
+|       |   ; CODE XREF from entry0 (0x80480aa)
+|      .--> 0x08048073      5e             pop esi
+|      :|   0x08048074      51             push ecx
+|      :|   0x08048075      53             push ebx
+|      :|   0x08048076      e84f010000     call fcn.080481ca
+|      :|   0x0804807b      5b             pop ebx
+|      :|   0x0804807c      50             push eax
+|      :|   0x0804807d      d412           aam 0x12
+|      :|   0x0804807f      d5f6           aad 0xf6
+|      :|   0x08048081      58             pop eax
+|     ,===< 0x08048082      7902           jns 0x8048086
+|     |:|   0x08048084      31db           xor ebx, ebx
+|     |:|   ; CODE XREF from entry0 (0x8048082)
+|     `---> 0x08048086      8a80ca800408   mov al, byte [eax + 0x80480ca] ; [0x80480ca:1]=5
+|      :|   0x0804808c      31d2           xor edx, edx
+|      :|   0x0804808e      f7e3           mul ebx
+|      :|   0x08048090      89c3           mov ebx, eax
+|      :|   0x08048092      b900010000     mov ecx, 0x100              ; 256
+|      :|   ; CODE XREF from entry0 (0x80480a7)
+|     .---> 0x08048097      8a81c9800408   mov al, byte [ecx + 0x80480c9] ; [0x80480c9:1]=128
+|     ::|   0x0804809d      fec8           dec al
+|    ,====< 0x0804809f      7806           js 0x80480a7
+|    |::|   0x080480a1      8881c9800408   mov byte [ecx + 0x80480c9], al ; [0x80480c9:1]=128
+|    ||:|   ; CODE XREF from entry0 (0x804809f)
+|    ``===< 0x080480a7      e2ee           loop 0x8048097
+|      :|   0x080480a9      59             pop ecx
+|      `==< 0x080480aa      e2c7           loop 0x8048073
+|       |   0x080480ac      81fb9a020000   cmp ebx, 0x29a              ; 666
+|      ,==< 0x080480b2      750f           jne 0x80480c3
+|      ||   0x080480b4      b9f0810408     mov ecx, 0x80481f0
+|      ||   0x080480b9      ba17000000     mov edx, 0x17               ; 23
+|      ||   0x080480be      e820010000     call fcn.080481e3
+|      ||   ; CODE XREFS from entry0 (0x8048064, 0x80480b2)
+|      ``-> 0x080480c3      b801000000     mov eax, 1
+|           0x080480c8      cd80           int 0x80
+|           ; DATA XREF from entry0 (0x8048086)
+|           0x080480ca      0509040f05     add eax, 0x50f0409
+|           0x080480cf      0b10           or edx, dword [eax]
+|           0x080480d1      0e             push cs
+|           0x080480d2      0b0d0d080c07   or ecx, dword [0x70c080d]
+|           0x080480d8      1002           adc byte [edx], al
+|           0x080480da      06             push es
+|           0x080480db      040b           add al, 0xb
+|           0x080480dd      0402           add al, 2
+|           0x080480df      0d070a040c     or eax, 0xc040a07
+|           0x080480e4      0e             push cs
+|           0x080480e5      1007           adc byte [edi], al
+|           0x080480e7      06             push es
+|           0x080480e8      030e           add ecx, dword [esi]
+|           0x080480ea      0109           add dword [ecx], ecx
+|           0x080480ec      010c0e         add dword [esi + ecx], ecx
+|           0x080480ef      0a0b           or cl, byte [ebx]
+|           0x080480f1      050109080d     add eax, 0xd080901
+|           0x080480f6      06             push es
+|           0x080480f7      0210           add dl, byte [eax]
+|           0x080480f9      06             push es
+|           0x080480fa      06             push es
+|           0x080480fb      0203           add al, byte [ebx]
+|           0x080480fd      06             push es
+|           0x080480fe      0b0e           or ecx, dword [esi]
+|           0x08048100      0505030f01     add eax, 0x10f0305
+|           0x08048105      05070d0805     add eax, 0x5080d07
+|           0x0804810a      0c10           or al, 0x10
+|           0x0804810c      0102           add dword [edx], eax
+|           0x0804810e      08040c         or byte [esp + ecx], al
+|           0x08048111      050b0d0d08     add eax, 0x80d0d0b
+|           0x08048116      0903           or dword [ebx], eax
+|           0x08048118      090a           or dword [edx], ecx
+|           0x0804811a      0c10           or al, 0x10
+|           0x0804811c      0b06           or eax, dword [esi]
+|           0x0804811e      06             push es
+|           0x0804811f      0d020e0d0e     or eax, 0xe0d0e02
+|           0x08048124      030401         add eax, dword [ecx + eax]
+|           0x08048127      06             push es
+|           0x08048128      0c0e           or al, 0xe
+|           0x0804812a      0509010408     add eax, 0x8040109
+|           0x0804812f      0407           add al, 7
+|           0x08048131      06             push es
+|           0x08048132      0c05           or al, 5
+|           0x08048134      0503030d0b     add eax, 0xb0d0303
+|           0x08048139      0c05           or al, 5
+|           0x0804813b      010402         add dword [edx + eax], eax
+|           0x0804813e      030f           add ecx, dword [edi]
+|           0x08048140      0b10           or edx, dword [eax]
+|           0x08048142      0102           add dword [edx], eax
+|           0x08048144      02040c         add al, byte [esp + ecx]
+|           0x08048147      050a060e02     add eax, 0x20e060a
+|           0x0804814c      050f0d0d0a     add eax, 0xa0d0d0f
+\           0x08048151      0f07           sysret
