@@ -1,1 +1,1 @@
-# squarectf18
+# scripts and stuff from SquareCTF
