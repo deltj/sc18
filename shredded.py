@@ -17,4 +17,14 @@ qrimg.paste(imgs[2], (40, 0))
 qrimg.paste(imgs[15], (50, 0))
 qrimg.paste(imgs[26], (60, 0))
 
+qrimg.paste(imgs[3], (70, 0))
+
+# last square order: 1 24 4 22 18 14
+qrimg.paste(imgs[1], (150, 0))
+qrimg.paste(imgs[24], (160, 0))
+qrimg.paste(imgs[4], (170, 0))
+qrimg.paste(imgs[22], (180, 0))
+qrimg.paste(imgs[18], (190, 0))
+qrimg.paste(imgs[14], (200, 0))
+
 qrimg.save("foo.png", "PNG")
